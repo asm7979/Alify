@@ -209,10 +209,11 @@ a {
   cursor: pointer;
   font-size: 1.8rem;
   font-weight: 600;
+  letter-spacing: 2px;
   margin: 1.5rem 0;
   padding: 2.2rem 3rem;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -262,6 +263,10 @@ a {
 .button--normal-width {
   width: 50%;
   display: inline-block;
+}
+
+.button--long {
+  padding: 2.4rem 7.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -375,11 +380,11 @@ a {
 
 .plan--popular .card__header::before {
   content: url(../icons/popular.svg);
-  width: 40px;
   display: inline-block;
   position: absolute;
   right: 4%;
   top: -5px;
+  width: 40px;
 }
 
 .plan--popular {
@@ -506,9 +511,9 @@ a {
 }
 
 .testimonial__image {
-  width: 100%;
   height: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 .testimonial__image-container {
@@ -518,8 +523,8 @@ a {
 
 .testimonial__image-container > .icon-container {
   position: absolute;
-  top: 4%;
   right: -40px;
+  top: 4%;
 }
 
 .testimonial__quote {
@@ -544,5 +549,48 @@ a {
 
   .testimonial__quote .quote__company {
     font-size: 1.6rem;
+  }
+}
+
+/* Testimonial */
+
+.callout {
+  overflow: auto;
+  border-radius: 20px;
+  margin: 2rem;
+  padding: 3rem;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.callout__heading {
+  margin-top: 0;
+  color: white;
+}
+
+.callout__button {
+  align-self: center;
+  justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout__button {
+    justify-self: start;
+    margin: 0 4rem;
   }
 }
