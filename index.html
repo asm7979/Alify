@@ -14,61 +14,18 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <section class="block container">
-      <header class="block__header">
-        <h2 class="block__heading">Heading 2</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, amet.
-        </p>
-      </header>
-      <div style="width: 40%; padding: 2rem">
-        <div class="plan plan--popular">
-          <div class="card card--secondary">
-            <header class="card__header">
-              <h3 class="plan__name">Business plus</h3>
-              <span class="plan__price">$54</span>
-              <span class="plan__billing-cycle">/month</span>
-              <span class="badge badge--secondary badge--small">10% OFF</span>
-              <span class="plan__description">Easy start on the cloud</span>
-            </header>
-            <div class="card__body">
-              <ul class="list list--with-Tick">
-                <li class="list__item">Unlimited Websites</li>
-                <li class="list__item">Unlimited Bandwidth</li>
-                <li class="list__item">100 GB SSD Storage</li>
-                <li class="list__item">3 GB RAM</li>
-                <li class="list__item">2 CPU Cores</li>
-              </ul>
-              <button class="button button--outline button--block">
-                buy now
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="block block--dark block--skewed-right">
-      <div class="container">
-        <h2 class="block__heading">Heading 2</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, amet.
-        </p>
-        <div class="media">
-          <div class="media__image">
-            <svg class="icon icon--primary">
-              <use xlink:href="icons/sprite.svg#growth"></use>
-            </svg>
-          </div>
-          <div class="media__body">
-            <h3 class="media__title">Staging, Git & WP-CLI</h3>
-            <p>
-              We make your WordPress and WooCommerce development flow easier
-              with a convenient staging tool and Git and WP-CLI integration.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <nav class="nav collapsible">
+      <a href="/" class="nav__logo"><img src="icons/logo.svg" alt="" /></a>
+      <svg class="icon icon--white nav__toggler">
+        <use xlink:href="icons/sprite.svg#menu"></use>
+      </svg>
+      <ul class="list nav__list collapsible__body">
+        <li class="nav__list-item"><a href="#">Hosting</a></li>
+        <li class="nav__list-item"><a href="#">VPS</a></li>
+        <li class="nav__list-item"><a href="#">Domain</a></li>
+        <li class="nav__list-item"><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
     <script src="js/main.js"></script>
   </body>
 </html>
