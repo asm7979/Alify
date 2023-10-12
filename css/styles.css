@@ -125,7 +125,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .badge {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .badge--small {
@@ -211,10 +211,18 @@ a {
   font-weight: 600;
   letter-spacing: 2px;
   margin: 1.5rem 0;
+  outline: 0;
   padding: 2.2rem 3rem;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.button .icon {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .button--outline {
@@ -273,6 +281,11 @@ a {
   .button {
     font-size: 1.5rem;
   }
+
+  .button .icon {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
 }
 
 /* Inputs */
@@ -295,7 +308,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 2rem;
+  padding: 1.5rem 1rem 1.5rem 4rem;
 }
 
 .input-group .button {
@@ -643,6 +656,7 @@ a {
 
 .block__heading {
   margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 .block__header {
@@ -795,5 +809,42 @@ a {
   .hero__content {
     text-align: left;
     padding: 5rem 0 0;
+  }
+}
+
+/* Domain block */
+
+.domain-block__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  justify-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.domain-block__prices .link--arrow {
+  color: inherit;
+  text-transform: inherit;
+}
+
+.domain-block .input-group {
+  border: 0;
+  box-shadow: 0 0 80px 15px #dbdbdb;
+  margin: 4rem auto;
+  max-width: 650px;
+}
+
+@media screen and (min-width: 768px) {
+  .domain-block__prices {
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    font-size: 1.5rem;
+  }
+
+  .domain-block__prices .link--arrow,
+  .domain-block__prices .badge {
+    font-size: 1.5rem;
   }
 }
