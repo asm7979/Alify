@@ -348,7 +348,27 @@ a {
   color: #fff;
 }
 
+.card--secondary .badge--secondary {
+  background: #6d62c2;
+}
+
+.card--primary .badge--primary {
+  background: #442ded;
+}
+
 /* Plans */
+
+.plan {
+  transition: transform 0.3s ease-in;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.05);
+}
 
 .plan__name {
   color: white;
@@ -365,10 +385,6 @@ a {
   opacity: 0.8;
   font-weight: 300;
   margin-right: 1.5rem;
-}
-
-.card--secondary .badge--secondary {
-  background: #6d62c2;
 }
 
 .plan__description {
@@ -400,11 +416,19 @@ a {
   width: 40px;
 }
 
-.plan--popular {
+.plan--popular .card__header {
   position: relative;
 }
 
 @media screen and (min-width: 1024px) {
+  .plan--popular {
+    transform: scale(1.05);
+  }
+
+  .plan--popular:hover {
+    transform: scale(1.1);
+  }
+
   .plan__name {
     font-size: 1.4rem;
   }
@@ -814,7 +838,7 @@ a {
 
 /* Domain block */
 
-.domain-block__prices {
+.block-domain__prices {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 6rem);
@@ -825,12 +849,12 @@ a {
   margin: 0 auto;
 }
 
-.domain-block__prices .link--arrow {
+.block-domain__prices .link--arrow {
   color: inherit;
   text-transform: inherit;
 }
 
-.domain-block .input-group {
+.block-domain .input-group {
   border: 0;
   box-shadow: 0 0 80px 15px #dbdbdb;
   margin: 4rem auto;
@@ -838,13 +862,32 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .domain-block__prices {
+  .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     font-size: 1.5rem;
   }
 
-  .domain-block__prices .link--arrow,
-  .domain-block__prices .badge {
+  .block-domain__prices .link--arrow,
+  .block-domain__prices .badge {
     font-size: 1.5rem;
+  }
+}
+
+/* Plans Block */
+
+.block-plans .grid {
+  gap: 4rem;
+  align-items: center;
+}
+
+/* should be : ".block-plans .plan" but it doesn't work correctly */
+.block-plans .card {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .block-plans .grid {
+    margin: 2.5rem 1rem;
   }
 }
