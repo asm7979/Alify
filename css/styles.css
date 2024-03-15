@@ -891,3 +891,49 @@ a {
     margin: 2.5rem 1rem;
   }
 }
+
+/* Features Block */
+
+.feature {
+  align-items: center;
+  gap: 7rem 3.5rem;
+  margin-bottom: 9rem;
+}
+
+.block-feature__header {
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+.block-feature__heading {
+  margin-bottom: 0;
+}
+
+.media.feature__text {
+  flex-direction: column;
+}
+
+.feature__text .media__body {
+  margin-left: 0;
+}
+
+.feature__text .media__image {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.feature__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.feature__link {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__text {
+    order: 2;
+  }
+}
