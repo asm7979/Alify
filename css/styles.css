@@ -17,6 +17,11 @@
 
 /* Typography */
 
+::selection {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -136,7 +141,6 @@ a {
 /* Lists */
 
 .list {
-  color: var(--color-heading);
   list-style: none;
   padding-left: 0;
 }
@@ -149,6 +153,7 @@ a {
 .list--with-Tick {
   list-style-image: url(../icons/tick.svg);
   padding-left: 2.5rem;
+  color: var(--color-heading);
 }
 
 .list--with-Tick .list__item {
@@ -696,14 +701,20 @@ a {
   color: #fff;
 }
 
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
+  color: #fff;
+}
+
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 5rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 5rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .container {
@@ -935,5 +946,35 @@ a {
 @media screen and (min-width: 768px) {
   .feature:nth-of-type(even) .feature__text {
     order: 2;
+  }
+}
+
+/* Showcase Block */
+
+.showcase__content {
+  margin-bottom: 7rem;
+  gap: 1.5rem;
+}
+
+.showcase__image {
+  width: 100%;
+}
+
+.showcase__content .list li {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .showcase__image {
+    width: auto;
+    max-width: 650px;
+  }
+
+  .showcase__content {
+    grid-template-columns: 50% 50%;
+  }
+
+  .showcase__content > picture {
+    justify-self: end;
   }
 }
