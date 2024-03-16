@@ -978,3 +978,9 @@ a {
     justify-self: end;
   }
 }
+
+/* Testimonial block */
+
+.block-testimonial .block__header {
+  margin-bottom: 5rem;
+}
