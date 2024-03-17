@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
   color: var(--color-body);
   line-height: 1.5;
@@ -111,6 +111,7 @@ a {
   font-weight: 550;
   padding: 0.5rem 2rem;
   white-space: nowrap;
+  margin: 0.5rem;
 }
 
 .badge--primary {
@@ -217,7 +218,7 @@ a {
   letter-spacing: 2px;
   margin: 1.5rem 0;
   outline: 0;
-  padding: 2.2rem 3rem;
+  padding: 2.2rem 1.5vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -313,7 +314,8 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem 1.5rem 4rem;
+  padding: 1.5rem 1rem;
+  width: 0;
 }
 
 .input-group .button {
@@ -395,6 +397,7 @@ a {
 .plan__description {
   display: block;
   letter-spacing: 2px;
+  margin-top: 1.2rem;
   font-weight: 200;
   font-size: 2rem;
 }
@@ -548,8 +551,8 @@ a {
 /* Testimonials */
 
 .testimonial {
-  padding: 3rem;
-  margin: 2rem;
+  padding: 2.5rem;
+  margin: 1.5rem;
 }
 
 .testimonial__image {
@@ -572,6 +575,10 @@ a {
 .testimonial__quote {
   margin: 5.5rem 1rem;
   margin-bottom: 1.5rem;
+}
+
+.testimonial .grid {
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 
 @media screen and (min-width: 768px) {
@@ -597,7 +604,7 @@ a {
 /* CallOuts */
 
 .callout {
-  overflow: auto;
+  overflow: visible;
   border-radius: 20px;
   margin: 2rem;
   padding: 3rem;
@@ -620,6 +627,7 @@ a {
 .callout__button {
   align-self: center;
   justify-self: center;
+  padding: 4.5vw 6.5vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -632,8 +640,8 @@ a {
   }
 
   .callout__button {
-    justify-self: start;
-    margin: 0 4rem;
+    margin: 0 4.5rem;
+    padding: 2rem 5rem;
   }
 }
 
@@ -850,19 +858,19 @@ a {
 /* Domain block */
 
 .block-domain__prices {
+  color: var(--color-heading);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 6rem);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 6rem);
   justify-items: center;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.9rem;
+  font-weight: 600;
   max-width: 750px;
   margin: 0 auto;
 }
 
 .block-domain__prices .link--arrow {
   color: inherit;
-  text-transform: inherit;
 }
 
 .block-domain .input-group {
@@ -875,6 +883,7 @@ a {
 @media screen and (min-width: 768px) {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(5rem, 1fr));
     font-size: 1.5rem;
   }
 
@@ -1048,15 +1057,15 @@ a {
   }
 
   .footer__copyright {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .footer__item .collapsible__heading {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
 
   .footer__item .collapsible__body {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     opacity: 1;
     max-height: 100%;
   }
