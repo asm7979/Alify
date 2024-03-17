@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -31,7 +32,7 @@
 
     <section class="block block--dark block--skewed-left hero">
       <div class="grid grid--1x2 container hero__grid">
-        <header class="block__header hero__content">
+        <header class="block__header hero__content" data-aos="fade-up-right">
           <h1 class="block__heading hero__title">Cloud Hosting for Pros</h1>
           <p class="hero__tagline">
             Deploy your website in less than 60 seconds
@@ -43,7 +44,7 @@
           >
         </header>
 
-        <picture>
+        <picture data-aos="fade-down">
           <source
             type="image/webp"
             srcset="
@@ -67,7 +68,7 @@
       </div>
     </section>
 
-    <section class="container block block-domain">
+    <section class="container block block-domain" data-aos="fade-up">
       <header class="block__header">
         <h2 class="block__heading">
           The best web hosting Starting at per month
@@ -180,7 +181,7 @@
 
     <br /><br /><br /><br /><br />
 
-    <section class="block container block-feature">
+    <section class="block container block-feature" data-aos="fade-right">
       <header class="block-feature__header">
         <h2 class="block-feature__heading">
           Host On The Cloud to Keep Growing
@@ -377,7 +378,7 @@
         <header class="block__header">
           <h2 class="block__heading">User-Friendly Control Panel</h2>
         </header>
-        <main class="grid grid--1x2 showcase__content">
+        <main class="grid grid--1x2 showcase__content" data-aos="fade-right">
           <picture>
             <source
               type="image/webp"
@@ -509,7 +510,7 @@
 
     <br /><br /><br />
 
-    <section class="container">
+    <section class="container" data-aos="zoom-in">
       <div class="grid grid--1x2 callout callout--primary">
         <div class="callout__content">
           <h2 class="callout__heading">Ready To Get Started?</h2>
@@ -598,5 +599,9 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
